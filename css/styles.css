@@ -30,21 +30,42 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#logo {
+  float: left;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #002e5b;
+  font-weight: 600;
+  padding: 20px 0px;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
+  background-color: bisque;
+
 }
 
-/* header {
-  background-image: url("../images/cropped-kiro-nilsson-logotipo11.png");
+header {
+  background-image: url("/img/cropped-kiro-nilsson-logotipo11.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 50px;
   margin-bottom: 10px;
-} */
+  width: 100%;
+  display: table;
+
+}
+
+footer {
+  background-color: var(--green);
+  height: auto;
+}
+
+/* Navigation  */
 
 /* nav {
   display: flex;
@@ -57,15 +78,56 @@ main {
   justify-content: flex-end;
 } */
 
-main {
-  /* height: 1600px; */
-  background-color: bisque;
+nav {
+  width: auto;
+  float: right;
 }
 
-footer {
-  background-color: var(--green);
-  height: auto;
+nav ul {
+  display: table;
+  float: right;
 }
+nav ul li { float: left; }
+nav ul li:last-child { padding-right: 0px; }
+nav ul li a {
+  color: #002e5b;
+  font-size: 18px;
+  padding: 25px 20px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover {
+  background-color: #002e5b;
+  color: #fde428;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a:hover i {
+  color: #fde428;
+  transition: all 0.5s ease 0s;
+}
+nav ul li a i {
+  padding-right: 10px;
+  color: #002e5b;
+  transition: all 0.5s ease 0s;
+}
+
+.toggle-menu ul {
+  display: table;
+  width: 25px;
+}
+.toggle-menu ul li {
+  width: 100%;
+  height: 3px;
+  background-color: #002e5b;
+  margin-bottom: 4px;
+}
+.toggle-menu ul li:last-child { margin-bottom: 0px; }
+input[type=checkbox], label { display: none; }
+
+
+
+
+
 
 /* nav ul {
   display: flex;
@@ -93,136 +155,58 @@ a :visited {
 /* classes */
 
 .hero-index {
-  background-image: url("/images/Spinal-Function-3.webp");
+  background-image: url("/img/Spinal-Function-3.webp");
   min-height: 350px;
 }
 
 /* ids */
 
-@media screen and (max-width: 420px) {
-  body {
-    width: 100%;
+
+@media only screen and (max-width: 430px) {
+  body {width: 100%;}
+  header { padding: 20px 0px; }
+  #logo { padding: 0px; }
+  input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    background: none;
   }
-
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10px;
+  input[type=checkbox]:fous {
+    background:none;
   }
-
-  /* nav {
-    min-height: 50px;
-
+  label {
+    float: right;
+    padding: 8px 0px;
+    display: inline-block;
+    cursor: pointer;
   }
-
-  h1 {
-    font-size: 2rem;
-  } */
-
-  /* 
-
-  .hero-index {
-    background-image: url("/images/Spinal-Function-3.webp");
-    min-height: 150px;
-    background-position: center;
-    background-size: cover;
-  }
-
-*/
-
-  /* ids */
-
-  #footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 15px;
-  }
-
-  /* nav {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    background-color: var(--green);
-    z-index: 100;
-    position: sticky;
-    padding: 0px 7px;
-    top: 0;
-    align-items: end;
-  } */
-
-  /* Hamburger menu */
-
-  .hamburger1 div {
-    background-color: rgb(61, 61, 61);
-    color: var(--bluegray);
-    position: relative;
-    width: 35px;
-    height: 4px;
-    margin-top: 3px;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .nav-menu {
-    width: 100%;
-    background-color: var(--bluegray);
-    margin: 0;
-    display: -ms-grid;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 5px;
-    padding: 0;
-    list-style: none;
-    clear: both;
-    width: auto;
-    text-align: center;
-    height: 0px;
-    overflow: hidden;
-    transition: height 0.4s ease;
-    z-index: 100;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .ham-menu {
+  input[type=checkbox]:checked ~ nav { display: block; }
+  nav {
     display: none;
+    position: absolute;
+    right: 0px;
+    top: 53px;
+    background-color: #002e5b;
+    padding: 0px;
+    z-index: 99;
   }
-
-  .nav-menu a:first-child {
-    margin: 0px;
+  nav ul { width: auto; }
+  nav ul li {
+    float: none;
+    padding: 0px;
+    width: 100%;
+    display: table;
   }
-
-  .nav-menu a:last-child {
-    margin-bottom: 20px;
+  nav ul li a {
+    color: #FFF;
+    font-size: 15px;
+    padding: 10px 20px;
+    display: block;
+    border-bottom: 1px solid rgba(225,225,225,0.1);
   }
-
-  /* ----- Hamburger IDs ----- */
-
-  #toggle1 {
-    display: none;
+  nav ul li a i {
+    color: #fde428;
+    padding-right: 13px;
   }
-
-  #toggle1:checked + .hamburger1 .top {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    margin-top: 12.5px;
   }
-
-  #toggle1:checked + .hamburger1 .meat {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-top: -5px;
-  }
-
-  #toggle1:checked + .hamburger1 .bottom {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-
-  #toggle1:checked ~ .nav-menu {
-    height: 240px;
-    margin-top: 10px;
-  }
-}
