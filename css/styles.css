@@ -11,65 +11,77 @@
   --green: #90d06a;
   --lilac: #beb5d9;
   --blue: #65509c;
+  --black: #030303;
   --home: href="index.html";
   --contact: href:"contact.html">Contact</a>;
 }
 
+* {
+
   margin: 0px;
   font-family: "Crimson Pro", serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 10px 0;
 }
 
 h1 {
   font-size: 3.5rem;
+  
 }
+
+p, q {
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+
+
+
+
 
 body {
   /* min-width: 800px; */
-  width: 80%;
+  
+  min-width: 800px;
+  max-width: 60%;
   display: flex;
   flex-direction: column;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
 }
 
-#logo {
-  float: left;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #002e5b;
-  font-weight: 600;
-  padding: 20px 0px;
+.logo {
+  padding: 20px 10px;
 }
 
-main {
+header,
+main,
+section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 20px;
-  background-color: bisque;
+  padding: 20px 8%;
 
 }
 
 header {
-  background-image: url("/img/cropped-kiro-nilsson-logotipo11.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 50px;
+  min-height: 50px;
   margin-bottom: 10px;
-  width: 100%;
-  display: table;
-
 }
 
-footer {
-  background-color: var(--green);
-  height: auto;
-}
+
 
 nav {
   width: auto;
   float: right;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 0.5px solid #030303;
 }
 
 nav ul {
@@ -110,6 +122,15 @@ nav ul li a i {
   transition: all 0.5s ease 0s;
 }
 
+.phone {
+  display: none;
+}
+
+.web {
+  display:inline;
+}
+
+
 .toggle-menu ul {
   display: table;
   width: 25px;
@@ -131,22 +152,92 @@ label {
   display: none;
 }
 
-.hero-index {
+#hero-index {
   background-image: url("/img/Spinal-Function-3.webp");
   min-height: 350px;
 }
 
+.profile-photo {
+  float: right;
+  width:max-content;
+
+}
+
+.footer-logo {
+  height: 80px;
+  width: min-content;
+}
+
+.footer-items {
+  padding: 20px 5%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.footer-items p {
+  color: white;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+
+}
+
+.bg-lilac {
+  background-color: var(--lilac);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bullet-list li {
+  list-style:disc;
+  font-size: 1.6rem;
+  line-height: 160%;
+  
+
+}
+
+#research {
+  background-image: url("/img/sharon-in-field.webp");
+  background-repeat: no-repeat;
+  min-height: 350px;
+}
+
+
 @media only screen and (max-width: 430px) {
+  
   body {
-    width: 100%;
+    width: 100%
   }
 
   header {
     padding: 20px 0px;
   }
 
-  #logo {
-    padding: 0px;
+  .logo {
+    padding:10px 10px;
+  }
+
+  .phone {
+    display:inline;
+  }
+  
+  .web {
+    display: none;
   }
 
   .nav-area {
