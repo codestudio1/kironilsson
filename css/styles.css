@@ -12,48 +12,45 @@
   --lilac: #beb5d9;
   --blue: #65509c;
   --black: #030303;
-  --home: href="index.html";
-  --contact: href:"contact.html">Contact</a>;
+  --home: <a href= "index.html" >Home</a>;
+  --contact: <a href= "contact.html" >Contact</a>;
 }
 
 * {
-
   margin: 0px;
   font-family: "Crimson Pro", serif;
   list-style: none;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   padding: 10px 0;
 }
 
 h1 {
   font-size: 3.5rem;
-  
 }
 
-p, q {
+p,
+q {
   font-size: 1.6rem;
   line-height: 140%;
 }
 
-
-
-
-
 body {
   /* min-width: 800px; */
-  /* min-width: 800px; */
-  max-width: 60%;
+  width: 1024px;
+  /* max-width: 20%; */
   display: flex;
   flex-direction: column;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.logo {
-  padding: 20px 10px;
 }
 
 header,
@@ -63,7 +60,6 @@ section {
   flex-direction: column;
   justify-content: center;
   padding: 20px 8%;
-
 }
 
 header {
@@ -71,11 +67,9 @@ header {
   margin-bottom: 10px;
 }
 
-
-
 nav {
   width: auto;
-  float: right;
+  align-items: center;
   position: sticky;
   top: 0;
   background-color: white;
@@ -96,7 +90,7 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  color: #002e5b;
+  color: var(--blue);
   font-size: 18px;
   padding: 25px 20px;
   display: inline-block;
@@ -104,9 +98,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #002e5b;
-  color: #fde428;
+  background-color: var(--lilac);
+  color: var(--black);
   transition: all 0.5s ease 0s;
+  border-radius: 20px;
 }
 
 nav ul li a:hover i {
@@ -120,46 +115,21 @@ nav ul li a i {
   transition: all 0.5s ease 0s;
 }
 
+.logo {
+  padding: 20px 10px;
+}
+
 .phone {
   display: none;
 }
 
 .web {
-  display:inline;
-}
-
-
-.toggle-menu ul {
-  display: table;
-  width: 25px;
-}
-
-.toggle-menu ul li {
-  width: 100%;
-  height: 3px;
-  background-color: #002e5b;
-  margin-bottom: 4px;
-}
-
-.toggle-menu ul li:last-child {
-  margin-bottom: 0px;
-}
-
-input[type=checkbox],
-label {
-  display: none;
-}
-
-#hero-index {
-  background-image: url("/img/Spinal-Function-3.webp");
-  min-height: 350px;
-  width: auto;
+  display: inline;
 }
 
 .profile-photo {
   float: right;
-  width:max-content;
-
+  width: max-content;
 }
 
 .footer-logo {
@@ -183,7 +153,6 @@ label {
   flex-direction: column;
   padding: 20px;
   align-items: center;
-
 }
 
 .bg-lilac {
@@ -203,11 +172,23 @@ label {
 }
 
 .bullet-list li {
-  list-style:disc;
+  list-style: disc;
   font-size: 1.6rem;
   line-height: 160%;
-  
+}
 
+#nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hero-index {
+  background-image: url("/img/Spinal-Function-3.webp");
+  min-height: 350px;
+  width: auto;
 }
 
 #research {
@@ -216,101 +197,88 @@ label {
   min-height: 350px;
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+    width: 768px;
+    box-shadow: none;
+  }
+
+  nav ul {
+    display: table;
+    float: right;
+  }
+
+  nav ul li {
+    float: left;
+  }
+
+  nav ul li:last-child {
+    padding-right: 0px;
+  }
+
+  nav ul li a {
+    color: var(--blue);
+    font-size: 18px;
+    padding: 10px 10px;
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+  }
+
+  nav ul li a:hover {
+    background-color: #002e5b;
+    color: #fde428;
+    transition: all 0.5s ease 0s;
+  }
+
+  nav ul li a:hover i {
+    color: #fde428;
+    transition: all 0.5s ease 0s;
+  }
+
+  nav ul li a i {
+    padding-right: 10px;
+    color: #002e5b;
+    transition: all 0.5s ease 0s;
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+  }
+}
 
 @media only screen and (max-width: 430px) {
-  
-  
-body {
-  min-width: 430px;
-  width: 430px;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-}
-
-.logo {
-  padding: 20px 10px;
-}
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 
 
-nav, 
-header,
-main,
-section,
-footer {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px 15px;
-
-}
-
-
- 
+  header,
+  main,
+  section,
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 15px;
+  }
 
   .logo {
-    padding:10px 10px;
+    padding: 10px 10px;
   }
 
   .phone {
-    display:inline;
+    display: inline;
   }
-  
+
   .web {
     display: none;
   }
 
-  .nav-area {
-    background: var(--green);
-    height: 60px;
-  }
-
-  input[type=checkbox] {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    background: none;
-  }
-
-  input[type=checkbox]:focus {
-    background: none;
-  }
-
-  label {
-    float: right;
-    padding: 8px 0px;
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  input[type=checkbox]:checked~.navbar {
-    display: block;
-  }
-
-  div .topnav {
-    display: flex;
-    flex-direction: row;
-    position: sticky;
-    right: 0px;
-    top: 90px;
-    background-color: #002e5b;
-    padding: 0px;
-    z-index: 100;
-  }
-
-  div .nav-items {
-    display: none;
-  }
-
-
-  div .ham-menu {
-    display: flex;
-    flex-direction: column;
-  }
-  
   nav ul {
     width: auto;
   }
@@ -323,7 +291,7 @@ footer {
   }
 
   nav ul li a {
-    color: #FFF;
+    color: var(--lilac);
     font-size: 15px;
     padding: 10px 20px;
     display: block;
@@ -333,5 +301,13 @@ footer {
   nav ul li a i {
     color: #fde428;
     padding-right: 13px;
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    flex-wrap: nowrap;
+    align-items: start;
   }
 }

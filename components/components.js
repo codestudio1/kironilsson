@@ -7,8 +7,8 @@ class Nav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div id="nav">
-      <img class="logo web" src="img/logoWithText.png" height="50px">
-      <img class="logo phone" src="img/logoOnly.png" height="50px">
+      <a href="/index.html"><img class="logo web" src="img/logoWithText.png" height="50px"></a>
+      <a href="/index.html"><img class="logo phone" src="img/logoOnly.png" height="50px"></a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">What we do</a></li>
@@ -16,7 +16,7 @@ class Nav extends HTMLElement {
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="legal.html">Legal</a></li>
-        <li><a href="pageTemplate.html">Template</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
       </ul>
       
