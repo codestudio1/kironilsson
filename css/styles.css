@@ -370,6 +370,7 @@ nav {
     display: flex;
     flex-direction: column;
     margin: 0;
+    width: 430px;
   }
 
   header,
@@ -380,7 +381,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding: 10px 5%;
-    width: 430px;
+  }
+
+  footer {
+    padding: 10px 0;
   }
 
   .nav-items {
@@ -394,10 +398,21 @@ nav {
   }
 
   .hamburger span {
-    width: 30px;
+    display: flex;
+    width: 40px;
     height: 5px;
-    color: var(--black);
-    padding: 10px 0;
+    background-color: var(--black);
+    border-radius: 5px;
+    margin: 4px 0;
+  }
+
+  .hamburger-items {
+    display: none;
+  }
+
+  .hamburger-items.visible {
+    display: flex;
+    flex-direction: column;
   }
 
   .logo {

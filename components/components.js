@@ -41,11 +41,15 @@ class Nav extends HTMLElement {
       <a href="contact.html">Contact</a>
       
     </div>
-      <div class="hamburger-menu">
+      <div class="hamburger-menu" id="hamburger-menu" onclick="toggleHamburger()">
         <div class="hamburger">
           <span></span>
           <span></span>
           <span></span>
+        </div>
+        <div class="hamburger-items" id="hamburger-items">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
         </div>
       </div>
     </div>
@@ -98,3 +102,4 @@ class Footer extends HTMLElement {
 }
 
 customElements.define("footer-component", Footer);
+
