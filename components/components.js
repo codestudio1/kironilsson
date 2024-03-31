@@ -6,19 +6,34 @@ class Nav extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div id="nav">
-      <a href="/index.html"><img class="logo web" src="img/logoWithText.png" height="50px"></a>
-      <a href="/index.html"><img class="logo phone" src="img/logoOnly.png" height="50px"></a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">What we do</a></li>
-        <li><a href="ourTeam.html">Our team</a></a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="legal.html">Legal</a></li>
-        <li><a href="contact.html">Contact</a></li>
-
-      </ul>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      
+      <div class="dropdown">
+      <button class="dropbtn">About us
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="about.html">About</a>
+        <a href="ourteam.html">Our Team</a>
+        
+      </div>
+    </div>
+      <a href="research.html">Research</a>
+      
+       
+      <div class="dropdown">
+        <button class="dropbtn">Legal
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="aviso.html">Aviso</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </div>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
       
     </div>
     `;
