@@ -45,7 +45,7 @@ q {
 
 body {
   /* min-width: 800px; */
-  width: 1024px;
+  width: 1376px;
   /* max-width: 20%; */
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px 8%;
+  padding: 20px 6%;
 }
 
 header {
@@ -83,15 +83,18 @@ nav {
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
+  font-size: 1.4rem;
   overflow: hidden;
   /* background-color: #333; */
+  padding: 0 6%;
+  align-items: center;
 }
 
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 16px;
+  /* font-size: 1.2rem; */
   color: var(--blue);
   text-align: center;
   padding: 14px 16px;
@@ -105,7 +108,7 @@ nav {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 1.4rem;
   border: none;
   outline: none;
   color: var(--blue);
@@ -156,7 +159,8 @@ nav {
 /*  navbar css end*/
 
 .logo {
-  padding: 20px 10px;
+  padding: 20px 0;
+  height: 60px;
 }
 
 .phone {
@@ -176,24 +180,21 @@ nav {
 
 .footer-logo {
   height: 80px;
-  width: min-content;
+  width: auto;
 }
 
 .footer-items {
-  padding: 20px 5%;
+  padding: 20px 6%;
   display: flex;
   flex-direction: row;
-  flex-flow: wrap;
-}
-
-.footer-items p {
-  color: white;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .footer-item {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 5 10px;
   align-items: center;
 }
 
@@ -350,6 +351,20 @@ nav {
     width: 768px;
     box-shadow: none;
   }
+
+  .logo {
+    padding: 5px;
+  }
+
+  .phone {
+    display: inline;
+  }
+
+  .web {
+    display: none;
+  }
+
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -379,5 +394,21 @@ nav {
 
   .web {
     display: none;
+  }
+
+  .footer-items {
+    /* padding: 5px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex-wrap: nowrap; */
+  }
+
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
   }
 }

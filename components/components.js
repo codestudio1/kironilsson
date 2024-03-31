@@ -7,6 +7,11 @@ class Nav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div class="navbar">
+        <div class="logos">
+          <img class="logo web" src="img/logoWithText.png"<a href="index.html"></a>
+          <img class="logo phone" src="img/logoOnly.png"<a href="index.html"></a>
+        </div>
+        <div class="nav-items">
       <a href="index.html">Home</a>
       
       <div class="dropdown">
@@ -36,6 +41,7 @@ class Nav extends HTMLElement {
       <a href="contact.html">Contact</a>
       
     </div>
+    </div>
     `;
   }
 }
@@ -53,25 +59,19 @@ class Footer extends HTMLElement {
     <div>
       <div class="footer-items bg-green">
         <div class="footer-item">
-          <img class="footer-logo" src="img/icpa-250px.webp" alt="">
-          ICPA
-        </div>
-        
-        <div class="footer-item">
-            <img class="footer-logo" src="img/rcc-licentiate.webp" alt="">
-            General Chiropractic Council
+          <img class="footer-logo" src="img/icpa-250px.webp" alt="">ICPA
         </div>
         <div class="footer-item">
-        <img class="footer-logo" src="img/col-fisos.webp" alt="">
-        Fisioterapeutes de la Comunidad Valenciana
+          <img class="footer-logo" src="img/rcc-licentiate.webp" alt="">General Chiropractic Council
         </div>
         <div class="footer-item">
-        <div class="footer-item">
-            <img class="footer-logo" src="img/gcc-registered.webp" alt="">
-            General Chiropractic Council
+          <img class="footer-logo" src="img/col-fisos.webp" alt="">Fisioterapeutes de la Comunidad Valenciana
         </div>
-        <img class="footer-logo" src="img/socialstyrelsen.webp" alt="">
-        Registrerad vid Socialstyrelsen
+        <div class="footer-item">
+            <img class="footer-logo" src="img/gcc-registered.webp" alt="">General Chiropractic Council
+        </div>
+        <div class="footer-item">
+          <img class="footer-logo" src="img/socialstyrelsen.webp" alt="">Registrerad vid Socialstyrelsen
         </div>
       </div>
     </div>
