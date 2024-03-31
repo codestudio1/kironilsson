@@ -8,8 +8,8 @@ class Nav extends HTMLElement {
     this.innerHTML = `
     <div class="navbar">
         <div class="logos">
-          <img class="logo web" src="img/logoWithText.png"<a href="index.html"></a>
-          <img class="logo phone" src="img/logoOnly.png"<a href="index.html"></a>
+          <a href="/index.html"><img class="logo web" src="img/logoWithText.png"></a>
+          <a href="/index.html"><img class="logo phone" src="img/logoOnly.png"></a>
         </div>
         <div class="nav-items">
       <a href="index.html">Home</a>
@@ -41,6 +41,13 @@ class Nav extends HTMLElement {
       <a href="contact.html">Contact</a>
       
     </div>
+      <div class="hamburger-menu">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
     `;
   }

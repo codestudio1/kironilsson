@@ -347,7 +347,6 @@ nav {
 /* slideshow css end */
 
 @media only screen and (max-width: 768px) {
-  
   body {
     width: 768px;
     box-shadow: none;
@@ -364,12 +363,9 @@ nav {
   .web {
     display: none;
   }
-
-
 }
 
 @media only screen and (max-width: 430px) {
-  
   body {
     display: flex;
     flex-direction: column;
@@ -383,11 +379,30 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 15px;
+    padding: 10px 5%;
+    width: 430px;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 5px;
+    color: var(--black);
+    padding: 10px 0;
   }
 
   .logo {
-    padding: 10px 10px;
+    padding: 10px 0px;
+    height: 60px;
   }
 
   .phone {
@@ -396,6 +411,15 @@ nav {
 
   .web {
     display: none;
+  }
+
+  .aviso li {
+    /* list-style-type: decimal; */
+    font-size: 1.6rem;
+  }
+
+  .aviso p {
+    font-size: 1.2rem;
   }
 
   .footer-items {
