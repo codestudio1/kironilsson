@@ -482,13 +482,21 @@ button.accordion {
     width: auto;
   }
 
-  .footer-link {
-    /* display: flex; */
-    /* flex-direction: column; */
-    padding: 5px 10px;
-    /* align-items: center; */
-    /* justify-content: center; */
+  .footer-link img {
+    height: 40px;
   }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact a {
+    font-size: 1.3rem;
+  }
+
+/* end footer css */
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -566,36 +574,40 @@ button.accordion {
     font-size: 1.2rem;
   }
 
-  .footer-items {
-    /* padding: 5px 0; */
+  /* footer css */
+
+  .footer-items,
+  .footer-link,
+  .footer-contact {
     display: flex;
+  }
+
+  .footer-items,
+  .footer-link {
     flex-direction: column;
+  }
+
+  .footer-items {
     justify-content: space-between;
-    /* flex-wrap: nowrap; */
-    color: var(--blue);
+    
   }
 
   .footer-link {
-    display: flex;
-    flex-direction: column;
     padding: 10px 20px;
     align-items: center;
     justify-content: center;
   }
 
-  .footer-contact {
-    display: flex;
-    flex-direction: row;
-    /* padding: px 20px; */
-    /* align-items: baseline; */
-    /* justify-content: flex-start; */
+  .footer-contacts {
+    flex-direction: column;
+    
+    
   }
 
-  .footer-contact p {
-    width: 100px;
+  .footer-contact a, p {
+    font-size: 1.1rem;
+    padding: 10px 0;
   }
 
-  .footer-contact a {
-    font-size: 1.4rem;
-  }
+  /* footer css end */
 }

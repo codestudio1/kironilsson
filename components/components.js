@@ -88,16 +88,13 @@ class Footer extends HTMLElement {
     
       <div class="footer-contacts bg-lilac">
         <div class="footer-contact">
-          <p>Call us today: </p>
-          <a href="tel:+34692611475">+34692611475</a>
+          <a href="tel:+34692611475">Call us today: +34692611475</a>
         </div>
         <div class="footer-contact">  
-          <p>Find us (opens in Google Maps): </p>
-          <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us</a>
+          <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us on Google</a>
         </div>
         <div class="footer-contact">
-          
-          <a href="mailto:kironilsson@kironilsson.com">Send us a mail</a>
+          <a href="mailto:kironilsson@kironilsson.com">Send us an e-mail</a>
         </div>
       </div>
    </div>
