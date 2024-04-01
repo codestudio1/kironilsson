@@ -7,16 +7,13 @@ class Nav extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div class="navbar">
-        <div class="logos">
-          <a class="web" href="index.html"><img class="logo web" src="img/logoWithText.png"></a>
-          <a class="phone" href="index.html"><img class="logo phone" src="img/logoOnly.png"></a>
-        </div>
-        <div class="nav-items">
-          <a href="index.html">Home</a>
-            <div class="dropdown">
-              <button class="dropbtn">About us
+      <a class="logo" href="index.html"><img class="logo" src="img/logoWithText.png"></a>
+      <div class="nav-items">
+        <a href="index.html">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn">About us
               <i class="fa fa-caret-down"></i>
-              </button>
+            </button>
       <div class="dropdown-content">
         <a href="about.html">About</a>
         <a href="ourteam.html">Our Team</a>
@@ -49,6 +46,7 @@ class Nav extends HTMLElement {
         <div class="hamburger-items" id="hamburger-items">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
+          <a href="ourteam.html">Our team</a>
           <a href="testimonials.html">Testimonials</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -68,44 +66,44 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div>
-      <div class="footer-items bg-green">
-        <div class="footer-item">
-          <img class="footer-logo" src="img/icpa-250px.webp" alt="">ICPA
+    <div class="footer-items">
+      <div class="footer-links bg-green">
+        <div class="footer-link">
+          <a href="https://icpa4kids.com/" target="_blank"><img src="img/icpa-250px.webp" alt="icpa logo">ICPA</a>
+          
         </div>
-        <div class="footer-item">
-          <img class="footer-logo" src="img/rcc-licentiate.webp" alt="">General Chiropractic Council
+        <div class="footer-link">
+          <a href="https://rcc-uk.org/"><img src="img/rcc-licentiate.webp" alt="">Royal College <br>of Chiropractors</a>
         </div>
-        <div class="footer-item">
-          <img class="footer-logo" src="img/col-fisos.webp" alt="">Fisioterapeutes de la Comunidad Valenciana
+        <div class="footer-link">
+          <a href="https://www.colfisiocv.com/"><img src="img/col-fisos.webp" alt="">Fisioterapeutes de la <br>Comunidad Valenciana</a>
         </div>
-        <div class="footer-item">
-            <img class="footer-logo" src="img/gcc-registered.webp" alt="">General Chiropractic Council
+        <div class="footer-link">
+          <a href="https://www.gcc-uk.org/"><img src="img/gcc-registered.webp" alt="">General Chiropractic Council</a>
         </div>
-        <div class="footer-item">
-          <img class="footer-logo" src="img/socialstyrelsen.webp" alt="">Registrerad vid Socialstyrelsen
+        <div class="footer-link">
+          <a href="http://www.socialstyrelsen.se/english"><img src="img/socialstyrelsen.webp" alt="">Registrerad vid Socialstyrelsen, Sweden</a>
+        </div>  
+      </div>
+    
+      <div class="footer-contacts bg-lilac">
+        <div class="footer-contact">
+          <p>Call us today: </p>
+          <a href="tel:+34692611475">+34692611475</a>
+        </div>
+        <div class="footer-contact">  
+          <p>Find us (opens in Google Maps): </p>
+          <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us</a>
+        </div>
+        <div class="footer-contact">
+          
+          <a href="mailto:kironilsson@kironilsson.com">Send us a mail</a>
         </div>
       </div>
-    </div>
-    <div class="footer-items bg-lilac">
-      <div class="footer-contact">
-        <p>Call us: </p>
-        <a href="tel:+34692611475">+34692611475</a>
-      </div>
-      <div class="footer-contact">  
-        <p>Find us: </p>
-        <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us</a>
-      </div>
-      <div class="footer-contact">
-        <p>Mail us: </p>
-        <a href="contact.html">Mail us</a>
-      </div>
-      </div>
+   </div>
+      
+      
 
-    </div>
-      
-      
-    </div>
     `;
   }
 }
@@ -115,4 +113,26 @@ customElements.define("footer-component", Footer);
 function toggleHamburger() {
   let element = document.getElementById("hamburger-items");
   element.classList.toggle("visible");
+}
+
+
+// accordion script
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }

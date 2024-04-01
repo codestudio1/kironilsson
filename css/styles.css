@@ -17,7 +17,7 @@
 }
 
 * {
-  margin: 0px;
+  margin: 0;
   font-family: "Crimson Pro", serif;
   list-style: none;
   text-decoration: none;
@@ -34,7 +34,11 @@ p {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 p,
@@ -67,6 +71,10 @@ header {
   margin-bottom: 10px;
 }
 
+header h1 {
+  font-size: 4rem;
+}
+
 nav {
   width: auto;
   align-items: center;
@@ -75,6 +83,10 @@ nav {
   background-color: white;
   border-bottom: 0.5px solid #030303;
   z-index: 100;
+}
+
+button.accordion {
+  font-size: 2.5rem;
 }
 
 /* dropdown navbar css */
@@ -89,15 +101,19 @@ nav {
   /* background-color: #333; */
   padding: 0 6%;
   align-items: center;
+  height: 100px;
 }
 
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  /* font-size: 1.2rem; */
   color: var(--blue);
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 10px 14px 0;
+}
+
+.navbar .logo {
+  height: 80px;
 }
 
 /* The dropdown container */
@@ -162,17 +178,48 @@ nav {
 
 /*  navbar css end*/
 
-.logo {
-  height: 60px;
+/* accordion css */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  /* padding: 18px; */
+  width: auto;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  padding: 0 6%;
 }
 
-.phone {
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: var(--lilac);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
   display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
-.web {
-  display: inline;
+.accordion p:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 22px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
 }
+
+.active p:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* end accordion css */
 
 .profile-photo {
   float: right;
@@ -181,24 +228,75 @@ nav {
 
 /* footer css */
 
-.footer-logo {
-  height: 80px;
-  width: auto;
-}
 
 .footer-items {
-  padding: 20px 6%;
+  flex-direction: column;
+  
+
+}
+
+.footer-links,
+.footer-link,
+.footer-items {
   display: flex;
+}
+
+.footer-links {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  padding: 15px 6%;
+
 }
 
-.footer-item {
+.footer-link {
+  flex-direction: column;
+  /* padding: 5px 10px; */
+  align-items: center;
+  justify-items: center;
+}
+
+.footer-link a {
   display: flex;
   flex-direction: column;
-  padding: 5 10px;
+  text-align: center;
+  
+}
+
+.footer-link img {
+  padding: 5px 0;
+  height: 80px;
+  width: max-content;
+  align-self: center;
+  
+}
+
+.footer-contacts,
+.footer-contact {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+}
+
+.footer-contacts {
+  justify-content:space-between;
+  flex-wrap: wrap;
+  padding: 20px 6%;
+
+}
+
+
+
+.footer-contact p {
+  width: -moz-fit-content;
+  width:fit-content;
+  padding: 0 10px 0;
+  
+}
+
+.footer-contact a, p {
+  font-size: 1.6rem;
+
 }
 
 /* end footer css */
@@ -249,6 +347,7 @@ nav {
 .slideshow-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   /* max-width: 1000px; */
   position: relative;
   margin: auto;
@@ -265,9 +364,9 @@ nav {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 25px;
   width: auto;
-  margin-top: -22px;
+  /* margin-top: -22px; */
   padding: 16px;
   color: var(--blue);
   font-weight: bold;
@@ -352,20 +451,43 @@ nav {
 
 @media only screen and (max-width: 768px) {
   body {
-    width: 768px;
+    width: auto;
     box-shadow: none;
   }
 
-  .logo {
-    padding: 5px;
+/* navigation css */
+
+  .navbar .logo {
+    height: 40px;
   }
 
-  .phone {
-    display: inline;
+  .nav-items {
+    display: flex;
+    justify-items: end;
+    font-size: 1rem;
   }
 
-  .web {
-    display: none;
+  .navbar button {
+    font-size: 1rem;
+  }
+
+  .dropdown .dropbtn {
+    font-size: inherit;
+  }
+
+  /* footer css */
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  .footer-link {
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 5px 10px;
+    /* align-items: center; */
+    /* justify-content: center; */
   }
 }
 
@@ -373,8 +495,7 @@ nav {
   body {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    width: auto;
+    /* margin: 0; */
   }
 
   header,
@@ -397,6 +518,11 @@ nav {
 
   .nav-items {
     display: none;
+  }
+
+  .navbar .logo {
+    /* padding: 10px 0px; */
+    height: 40px;
   }
 
   .hamburger {
@@ -431,19 +557,6 @@ nav {
     top: 80px;
   }
 
-  .logo {
-    padding: 10px 0px;
-    height: 60px;
-  }
-
-  .phone {
-    display: inline;
-  }
-
-  .web {
-    display: none;
-  }
-
   .aviso li {
     /* list-style-type: decimal; */
     font-size: 1.6rem;
@@ -462,7 +575,7 @@ nav {
     color: var(--blue);
   }
 
-  .footer-item {
+  .footer-link {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
@@ -475,7 +588,7 @@ nav {
     flex-direction: row;
     /* padding: px 20px; */
     /* align-items: baseline; */
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
 
   .footer-contact p {
