@@ -8,16 +8,15 @@ class Nav extends HTMLElement {
     this.innerHTML = `
     <div class="navbar">
         <div class="logos">
-          <a href="/index.html"><img class="logo web" src="img/logoWithText.png"></a>
-          <a href="/index.html"><img class="logo phone" src="img/logoOnly.png"></a>
+          <a class="web" href="/index.html"><img class="logo web" src="img/logoWithText.png"></a>
+          <a class="phone" href="/index.html"><img class="logo phone" src="img/logoOnly.png"></a>
         </div>
         <div class="nav-items">
-      <a href="index.html">Home</a>
-      
-      <div class="dropdown">
-      <button class="dropbtn">About us
-        <i class="fa fa-caret-down"></i>
-      </button>
+          <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">About us
+              <i class="fa fa-caret-down"></i>
+              </button>
       <div class="dropdown-content">
         <a href="about.html">About</a>
         <a href="ourteam.html">Our Team</a>
@@ -41,7 +40,7 @@ class Nav extends HTMLElement {
       <a href="contact.html">Contact</a>
       
     </div>
-      <div class="hamburger-menu" id="hamburger-menu" onclick="toggleHamburger()">
+      <div id="hamburger-menu" onclick="toggleHamburger()">
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -50,6 +49,8 @@ class Nav extends HTMLElement {
         <div class="hamburger-items" id="hamburger-items">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </div>
@@ -86,11 +87,19 @@ class Footer extends HTMLElement {
         </div>
       </div>
     </div>
-    <div class="footer-items bg-black">
-      <div>
-        <p>Call us: <a href="tel:+34692611475">+34692611475</a></p>
-        <p>Find us: <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us</a></p>
-        <p>Mail us: <a href="contact.html">Mail us</a></p>
+    <div class="footer-items bg-lilac">
+      <div class="footer-contact">
+        <p>Call us: </p>
+        <a href="tel:+34692611475">+34692611475</a>
+      </div>
+      <div class="footer-contact">  
+        <p>Find us: </p>
+        <a href="https://maps.app.goo.gl/icBLQtyQ44JDjDK77">Find us</a>
+      </div>
+      <div class="footer-contact">
+        <p>Mail us: </p>
+        <a href="contact.html">Mail us</a>
+      </div>
       </div>
 
     </div>
@@ -103,3 +112,7 @@ class Footer extends HTMLElement {
 
 customElements.define("footer-component", Footer);
 
+function toggleHamburger() {
+  let element = document.getElementById("hamburger-items");
+  element.classList.toggle("visible");
+}

@@ -156,10 +156,13 @@ nav {
   display: block;
 }
 
+#hamburger-menu {
+  display: none;
+}
+
 /*  navbar css end*/
 
 .logo {
-  padding: 20px 0;
   height: 60px;
 }
 
@@ -223,9 +226,10 @@ nav {
 }
 
 #hero-index {
-  background-image: url("/img/Spinal-Function-3.webp");
-  min-height: 350px;
-  width: auto;
+  background: url("/img/Spinal-Function-3.webp");
+  background-size: cover;
+  height: 400px;
+  padding: 20px 8%;
 }
 
 #research {
@@ -387,6 +391,10 @@ nav {
     padding: 10px 0;
   }
 
+  .navbar {
+    height: 80px;
+  }
+
   .nav-items {
     display: none;
   }
@@ -395,6 +403,10 @@ nav {
     display: flex;
     flex-direction: column;
     padding: 10px 0;
+  }
+
+  #hamburger-menu {
+    display: flex;
   }
 
   .hamburger span {
@@ -413,6 +425,10 @@ nav {
   .hamburger-items.visible {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 80px;
   }
 
   .logo {
@@ -443,6 +459,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     /* flex-wrap: nowrap; */
+    color: var(--blue);
   }
 
   .footer-item {
@@ -451,5 +468,21 @@ nav {
     padding: 10px 20px;
     align-items: center;
     justify-content: center;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: row;
+    /* padding: px 20px; */
+    /* align-items: baseline; */
+    justify-content: flex-start;
+  }
+
+  .footer-contact p {
+    width: 100px;
+  }
+
+  .footer-contact a {
+    font-size: 1.4rem;
   }
 }
