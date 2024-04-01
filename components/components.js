@@ -8,8 +8,8 @@ class Nav extends HTMLElement {
     this.innerHTML = `
     <div class="navbar">
         <div class="logos">
-          <a class="web" href="/index.html"><img class="logo web" src="img/logoWithText.png"></a>
-          <a class="phone" href="/index.html"><img class="logo phone" src="img/logoOnly.png"></a>
+          <a class="web" href="index.html"><img class="logo web" src="img/logoWithText.png"></a>
+          <a class="phone" href="index.html"><img class="logo phone" src="img/logoOnly.png"></a>
         </div>
         <div class="nav-items">
           <a href="index.html">Home</a>
