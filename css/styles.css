@@ -324,14 +324,14 @@ button.accordion {
 }
 
 #hero-index {
-  background: url("/img/Spinal-Function-3.webp");
+  background: url("img/Spinal-Function-3.webp");
   background-size: cover;
   height: 400px;
   padding: 20px 8%;
 }
 
 #research {
-  background-image: url("/img/sharon-in-field.webp");
+  background-image: url("img/sharon-in-field.webp");
   background-repeat: no-repeat;
   min-height: 350px;
 }
