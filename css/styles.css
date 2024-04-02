@@ -10,7 +10,7 @@
 :root {
   --green: #90d06a;
   --lilac: #beb5d9;
-  --blue: #65509c;
+  --blue: #66509c;
   --black: #030303;
   --home: <a href= "index.html" >Home</a>;
   --contact: <a href= "contact.html" >Contact</a>;
@@ -68,7 +68,7 @@ section {
 
 header {
   min-height: 50px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 header h1 {
@@ -96,7 +96,7 @@ button.accordion {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   overflow: hidden;
   /* background-color: #333; */
   padding: 0 6%;
@@ -109,11 +109,16 @@ button.accordion {
   float: left;
   color: var(--blue);
   text-align: center;
-  padding: 14px 10px 14px 0;
+  padding: 14px 10px;
 }
 
-.navbar .logo {
+.logo {
   height: 80px;
+  /* padding: 14px 10px; */
+}
+
+a.logo {
+  padding-left: 0;
 }
 
 /* The dropdown container */
@@ -124,11 +129,11 @@ button.accordion {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   border: none;
   outline: none;
   color: var(--blue);
-  padding: 14px 16px;
+  padding: 14px 10px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -175,6 +180,18 @@ button.accordion {
 #hamburger-menu {
   display: none;
 }
+
+.social-icons a {
+  padding:0 8px;
+  
+}
+
+.social-icons img {
+  height: 25px;
+  
+}
+
+
 
 /*  navbar css end*/
 
@@ -324,16 +341,28 @@ button.accordion {
 }
 
 #hero-index {
-  background: url("img/Spinal-Function-3.webp");
+  background: url("/img/Spinal-Function-3.webp");
   background-size: cover;
   height: 400px;
   padding: 20px 8%;
 }
 
 #research {
-  background-image: url("img/sharon-in-field.webp");
+  background-image: url("/img/sharon-in-field.webp");
   background-repeat: no-repeat;
   min-height: 350px;
+  background-size: cover;
+
+}
+
+.backdrop {
+  background-color: lightblue;
+  background-color: rgba(0, 0, 0, 0.19);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  padding: 50px;
+  color: white;
+  border-radius: 20px;
 }
 
 /* slideshow css */
@@ -373,6 +402,7 @@ button.accordion {
   font-size: 32px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
   user-select: none;
 }
 

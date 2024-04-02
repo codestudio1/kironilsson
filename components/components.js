@@ -8,7 +8,9 @@ class Nav extends HTMLElement {
     this.innerHTML = `
     <div class="navbar">
       <a class="logo" href="index.html"><img class="logo" src="img/logoWithText.png"></a>
+      
       <div class="nav-items">
+      
         <a href="index.html">Home</a>
           <div class="dropdown">
             <button class="dropbtn">About us
@@ -36,7 +38,15 @@ class Nav extends HTMLElement {
       <a href="testimonials.html">Testimonials</a>
       <a href="contact.html">Contact</a>
       
+      
     </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/KiroNilsson/"><img src="/img/facebook-svgrepo-com.svg"></a>
+        <a href="https://www.instagram.com/kironilsson/"><img src="/img/instagram-svgrepo-com.svg"></a>
+        <a href="https://www.linkedin.com/company/centro-quiropr-ctico-nilsson/"><img src="/img/linkedin_icon.svg"></a>
+        <a href="https://twitter.com/KiroNilsson"><img src="/img/x-logo-black.svg"></a>
+        
+      </div>
       <div id="hamburger-menu" onclick="toggleHamburger()">
         <div class="hamburger">
           <span></span>
