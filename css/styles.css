@@ -455,6 +455,10 @@ button.accordion {
     box-shadow: none;
   }
 
+  header h1 {
+    font-size: 3em;
+  }
+
 /* navigation css */
 
   .navbar .logo {
@@ -519,6 +523,16 @@ button.accordion {
   footer {
     padding: 10px 0;
   }
+
+  header h1, h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+
 
   .navbar {
     height: 80px;
