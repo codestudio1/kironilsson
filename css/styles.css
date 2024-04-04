@@ -49,7 +49,7 @@ q {
 
 body {
   /* min-width: 800px; */
-  width: 1376px;
+  max-width: 1376px;
   /* max-width: 20%; */
   display: flex;
   flex-direction: column;
@@ -62,8 +62,11 @@ main,
 section {
   display: flex;
   flex-direction: column;
+  
   justify-content: center;
   padding: 20px 6%;
+  
+  
 }
 
 header {
@@ -72,7 +75,9 @@ header {
 }
 
 header h1 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  /* font-size: clamp(16px, calc(20px + (36–20) * (100vw - 768px)/(1920–768)), 48px); */
+  font-size: 4vw;
 }
 
 nav {
@@ -92,6 +97,30 @@ button.accordion {
 /* dropdown navbar css */
 
 /* Navbar container */
+
+#navigation {
+  display: flex;
+  flex-direction: column;
+  justify-items: end;
+}
+
+#social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding-top: 20px;
+}
+
+#social-icons a {
+  padding:0 8px;
+  
+}
+
+#social-icons img {
+  height: 25px;
+  
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -109,17 +138,21 @@ button.accordion {
   float: left;
   color: var(--blue);
   text-align: center;
-  padding: 14px 10px;
+  /* padding: 10px 10px; */
 }
 
 .logo {
-  height: 80px;
+  max-height: 80px;
+  width: 25vw;
+  max-width: fit-content;
   /* padding: 14px 10px; */
-}
-
-a.logo {
   padding-left: 0;
 }
+
+.navbar a.logo{
+  padding: 0;
+}
+
 
 /* The dropdown container */
 .dropdown {
@@ -127,13 +160,19 @@ a.logo {
   overflow: hidden;
 }
 
+.navbar a,
+.dropdown .dropbtn {
+  padding: 5px 10px 5px;
+  font-size: 2vw;
+}
+
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   border: none;
   outline: none;
   color: var(--blue);
-  padding: 14px 10px;
+  /* padding: 0px 10px; */
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -181,15 +220,7 @@ a.logo {
   display: none;
 }
 
-.social-icons a {
-  padding:0 8px;
-  
-}
 
-.social-icons img {
-  height: 25px;
-  
-}
 
 
 
@@ -340,30 +371,37 @@ a.logo {
   line-height: 160%;
 }
 
-#hero-index {
-  background: url("/img/Spinal-Function-3.webp");
+.hero {
   background-size: cover;
-  height: 400px;
-  padding: 20px 8%;
-}
-
-#research {
-  background-image: url("/img/sharon-in-field.webp");
   background-repeat: no-repeat;
   min-height: 350px;
-  background-size: cover;
+  border: 0 solid #030303;
+  border-radius: 10px;
+  padding: 20px 8%;
+  
+}
 
+#hero-index {
+  background-image: url("/img/Spinal-Function-3.webp");
+    
+}
+
+#hero-research {
+  background-image: url("/img/sharon-in-field.webp");
+   
 }
 
 .backdrop {
-  background-color: lightblue;
-  background-color: rgba(0, 0, 0, 0.19);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 60px;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
+
+
 }
+
 
 /* slideshow css */
 

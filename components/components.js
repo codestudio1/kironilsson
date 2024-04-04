@@ -8,7 +8,13 @@ class Nav extends HTMLElement {
     this.innerHTML = `
     <div class="navbar">
       <a class="logo" href="index.html"><img class="logo" src="img/logoWithText.png"></a>
-      
+      <div id="navigation">
+        <div id="social-icons">
+        <a href="https://www.facebook.com/KiroNilsson/"><img src="/img/facebook-svgrepo-com.svg"></a>
+        <a href="https://www.instagram.com/kironilsson/"><img src="/img/instagram-svgrepo-com.svg"></a>
+        <a href="https://www.linkedin.com/company/centro-quiropr-ctico-nilsson/"><img src="/img/linkedin_icon.svg"></a>
+        <a href="https://twitter.com/KiroNilsson"><img src="/img/x-logo-black.svg"></a>
+      </div>
       <div class="nav-items">
       
         <a href="index.html">Home</a>
@@ -40,12 +46,7 @@ class Nav extends HTMLElement {
       
       
     </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/KiroNilsson/"><img src="/img/facebook-svgrepo-com.svg"></a>
-        <a href="https://www.instagram.com/kironilsson/"><img src="/img/instagram-svgrepo-com.svg"></a>
-        <a href="https://www.linkedin.com/company/centro-quiropr-ctico-nilsson/"><img src="/img/linkedin_icon.svg"></a>
-        <a href="https://twitter.com/KiroNilsson"><img src="/img/x-logo-black.svg"></a>
-        
+    
       </div>
       <div id="hamburger-menu" onclick="toggleHamburger()">
         <div class="hamburger">
@@ -106,6 +107,8 @@ class Footer extends HTMLElement {
         <div class="footer-contact">
           <a href="mailto:kironilsson@kironilsson.com">Send us an e-mail</a>
         </div>
+        
+
       </div>
    </div>
       

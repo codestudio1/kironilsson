@@ -1,11 +1,10 @@
-const footer = document.getElementById('footer');
-template.innerHTML = `
+const foo = document.getElementById("footer-contacts");
+foo.innerHTML = `
   <div>
-  <p>Plaza Balduino I de Belgica</p>
-  <p>Telephone: +34 692 61 14 75</p>
-  <p>Mail: kironilsson@kironilsson.com</p>
-  <p>Hello World</p>
+    <p>Plaza Balduino I de Belgica</p>
+    <p>Telephone: +34 692 61 14 75</p>
+    <p>Mail: kironilsson@kironilsson.com</p>
   </div>
 `;
 
-document.body.appendChild(footer.content);
+document.body.appendChild(foo.innerHTML);
