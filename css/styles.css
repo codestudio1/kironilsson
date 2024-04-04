@@ -314,7 +314,7 @@ button.accordion {
 .footer-link img {
   padding: 5px 0;
   height: 80px;
-  width: max-content;
+  width: fit-content;
   align-self: center;
   
 }
@@ -689,6 +689,10 @@ button.accordion {
   .footer-contact a, p {
     font-size: 1.1rem;
     padding: 10px 0;
+  }
+
+  .footer-link img {
+    
   }
 
   /* footer css end */
