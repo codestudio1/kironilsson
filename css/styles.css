@@ -34,16 +34,16 @@ p {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.6vw;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3vw;
 }
 
 p,
 q {
-  font-size: 1.6rem;
+  font-size: 2.4vw;
   line-height: 140%;
 }
 
@@ -75,9 +75,9 @@ header {
 }
 
 header h1 {
-  /* font-size: 4rem; */
   /* font-size: clamp(16px, calc(20px + (36–20) * (100vw - 768px)/(1920–768)), 48px); */
-  font-size: 4vw;
+  /* font-size: 4vw; */
+  font-size: clamp(1rem, 0.1134rem + 3.299vw, 4rem);
 }
 
 nav {
@@ -125,7 +125,7 @@ button.accordion {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
   overflow: hidden;
   /* background-color: #333; */
   padding: 0 6%;
@@ -143,7 +143,7 @@ button.accordion {
 
 .logo {
   max-height: 80px;
-  width: 25vw;
+  /* width: fit-content; */
   max-width: fit-content;
   /* padding: 14px 10px; */
   padding-left: 0;
@@ -163,7 +163,7 @@ button.accordion {
 .navbar a,
 .dropdown .dropbtn {
   padding: 5px 10px 5px;
-  font-size: 2vw;
+  font-size: 1.8vw;
 }
 
 /* Dropdown button */
@@ -314,6 +314,7 @@ button.accordion {
 .footer-link img {
   padding: 5px 0;
   height: 80px;
+  width: auto;
   width: fit-content;
   align-self: center;
   
@@ -333,8 +334,6 @@ button.accordion {
 
 }
 
-
-
 .footer-contact p {
   width: -moz-fit-content;
   width:fit-content;
@@ -342,8 +341,9 @@ button.accordion {
   
 }
 
-.footer-contact a, p {
-  font-size: 1.6rem;
+.footer-contact a, 
+.footer-contact p {
+  font-size: 2.2vw;
 
 }
 
@@ -523,26 +523,21 @@ button.accordion {
     box-shadow: none;
   }
 
-  header h1 {
-    font-size: 3em;
-  }
-
 /* navigation css */
 
+
+
   .navbar .logo {
-    height: 40px;
+    height: 50px;
   }
 
   .nav-items {
     display: flex;
     justify-items: end;
-    font-size: 1rem;
+  
   }
 
-  .navbar button {
-    font-size: 1rem;
-  }
-
+  .navbar a,
   .dropdown .dropbtn {
     font-size: inherit;
   }
@@ -592,7 +587,8 @@ button.accordion {
     padding: 10px 0;
   }
 
-  header h1, h1 {
+  header h1,
+  h1 {
     font-size: 2rem;
   }
 
@@ -600,10 +596,8 @@ button.accordion {
     font-size: 1.6rem;
   }
 
-
-
   .navbar {
-    height: 80px;
+    height: 60px;
   }
 
   .nav-items {
@@ -613,6 +607,10 @@ button.accordion {
   .navbar .logo {
     /* padding: 10px 0px; */
     height: 40px;
+  }
+
+  #social-icons img {
+    width: 18px;
   }
 
   .hamburger {
@@ -692,7 +690,8 @@ button.accordion {
   }
 
   .footer-link img {
-    
+    /* clip: auto; */
+    overflow: hidden;
   }
 
   /* footer css end */
